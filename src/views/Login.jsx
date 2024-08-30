@@ -10,7 +10,7 @@ import useLocalStorage from "../hooks/useLocalStorage";
 
 function Login() {
   const { setItem } = useLocalStorage();
-  const [email_address, setEmailAddress] = useState("");
+  const [email, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const api = useApi();
@@ -20,7 +20,7 @@ function Login() {
     e.preventDefault();
     try {
       const body = {
-        email_address,
+        email,
         password,
       };
       const { data } = await api.post("/login", body);
@@ -48,7 +48,7 @@ function Login() {
           <Form onSubmit={handleLogin}>
             <Form.Group
               className="mb-3"
-              value={email_address}
+              value={email}
               onChange={(e) => setEmailAddress(e.target.value)}
               controlId="formBasicEmail"
             >

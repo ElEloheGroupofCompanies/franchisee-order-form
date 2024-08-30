@@ -11,7 +11,7 @@ import useLocalStorage from "../hooks/useLocalStorage";
 function Register() {
   const { setItem } = useLocalStorage();
   const [name, setName] = useState("");
-  const [email_address, setEmailAddress] = useState("");
+  const [email, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
   const [password_confirmation, setPasswordConfirmation] = useState("");
   const api = useApi();
@@ -22,7 +22,7 @@ function Register() {
     try {
       const body = {
         name,
-        email_address,
+        email,
         password,
         password_confirmation,
       };
@@ -64,7 +64,7 @@ function Register() {
            
             <Form.Group
               className="mb-3"
-              value={email_address}
+              value={email}
               onChange={(e) => setEmailAddress(e.target.value)}
             >
               <Form.Label>Email address</Form.Label>
