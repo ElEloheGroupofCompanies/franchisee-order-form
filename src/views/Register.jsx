@@ -36,7 +36,6 @@ function Register() {
       setItem("token", data.token);
       setItem("user", JSON.stringify(data.user));
       navigate("/home");
-      navigate(0);
     } catch (e) {
       if (e.response && e.response.data) {
         toast.error(e.response.data.message);
