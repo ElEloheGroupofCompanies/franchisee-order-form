@@ -116,7 +116,7 @@ function Register() {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" placeholder="Confirm Password" />
             </Form.Group>
-            <Button className="m-1" variant="info" type="button" onClick={() => navigate("/login")}>
+            <Button className="m-1" variant="info" type="button" onClick={() => navigate("/")}>
             Go to Login
           </Button>
             <Button variant="info" type="submit">
