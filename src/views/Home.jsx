@@ -22,6 +22,7 @@ const Home = () => {
             removeItem("token");
             removeItem("user");
             navigate("/");
+            navigate(0);
         } catch (e) {
             console.log(e);
         }
