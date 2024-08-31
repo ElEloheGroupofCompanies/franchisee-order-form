@@ -12,6 +12,9 @@ function Register() {
   const { setItem } = useLocalStorage();
   const [name, setName] = useState("");
   const [email, setEmailAddress] = useState("");
+  const [business_name, setBusinessName] = useState("");
+  const [outlet, setOutlet] = useState("");
+  const [address, setAddress] = useState("");
   const [password, setPassword] = useState("");
   const [password_confirmation, setPasswordConfirmation] = useState("");
   const api = useApi();
@@ -23,6 +26,9 @@ function Register() {
       const body = {
         name,
         email,
+        business_name,
+        outlet,
+        address,
         password,
         password_confirmation,
       };
@@ -69,6 +75,30 @@ function Register() {
             >
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              value={business_name}
+              onChange={(e) => setBusinessName(e.target.value)}
+            >
+              <Form.Label>Business Name</Form.Label>
+              <Form.Control type="text" placeholder="Business Name" />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              value={outlet}
+              onChange={(e) => setOutlet(e.target.value)}
+            >
+              <Form.Label>Outlet</Form.Label>
+              <Form.Control type="text" placeholder="Outlet" />
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            >
+              <Form.Label>Address</Form.Label>
+              <Form.Control type="text" placeholder="Address" />
             </Form.Group>
             <Form.Group
               className="mb-3"

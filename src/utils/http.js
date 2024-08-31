@@ -2,8 +2,8 @@ import axios from "axios";
 
 function useApi(token = null) {
   return axios.create({
-    baseURL: "http://localhost:8000/api",
-    images: "http://localhost:8000/images",
+    baseURL: "https://franchisee-backend.onrender.com/api",
+    images: "https://franchisee-backend.onrender.com/images",
     headers: {
       Accept: "application/json",
       Authorization: `Bearer ${token}`,

@@ -129,7 +129,7 @@ function CreatePurchaseOrderForm() {
                                 <Form.Label>Business Name</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    value={business_name}
+                                    value={business_name || user?.business_name}
                                     onChange={(e) => setBusinessName(e.target.value)}
                                     placeholder="Business Name"
                                 />
@@ -140,7 +140,7 @@ function CreatePurchaseOrderForm() {
                                 <Form.Label>Outlet</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    value={outlet}
+                                    value={outlet || user?.outlet}
                                     onChange={(e) => setOutlet(e.target.value)}
                                     placeholder="Outlet"
                                 />
@@ -151,7 +151,7 @@ function CreatePurchaseOrderForm() {
                                 <Form.Label>Address</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    value={address}
+                                    value={address || user?.address}
                                     onChange={(e) => setAddress(e.target.value)}
                                     placeholder="Address"
                                 />
