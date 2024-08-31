@@ -59,7 +59,6 @@ function CreatePurchaseOrderForm() {
             const { data } = await api.post("/purchaseorderform", body);
             toast.success(data.message);
             navigate("/home");
-            navigate(0);
         } catch (e) {
             if (e.response && e.response.data) {
                 toast.error(e.response.data.message);
