@@ -21,7 +21,7 @@ const Home = () => {
             await api.post("/logout");
             removeItem("token");
             removeItem("user");
-            navigate("/login");
+            navigate("/");
         } catch (e) {
             console.log(e);
         }
