@@ -6,12 +6,12 @@ import CreatePurchaseOrderForm from "./views/CreatePurchaseOrderForm";
 const routes = [
   {
     name: "Home",
-    path: "/",
+    path: "/home",
     element: <Home />,
   },
   {
     name: "Login",
-    path: "/login",
+    path: "/",
     element: <Login />,
   },
   {
