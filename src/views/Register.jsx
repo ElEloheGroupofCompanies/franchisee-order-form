@@ -35,7 +35,7 @@ function Register() {
       const { data } = await api.post("/register", body);
       setItem("token", data.token);
       setItem("user", JSON.stringify(data.user));
-      navigate("/");
+      navigate("/home");
       navigate(0);
     } catch (e) {
       if (e.response && e.response.data) {

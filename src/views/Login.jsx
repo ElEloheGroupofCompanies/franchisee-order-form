@@ -26,7 +26,7 @@ function Login() {
       const { data } = await api.post("/login", body);
       setItem("token", data.token);
       setItem("user", JSON.stringify(data.user));
-      navigate("/");
+      navigate("/home");
       navigate(0);
     } catch (e) {
       toast.error(e.response.data.message);
