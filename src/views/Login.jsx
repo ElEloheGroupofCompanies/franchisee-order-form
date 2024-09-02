@@ -6,6 +6,7 @@ import { useState } from "react";
 import useApi from "../utils/http";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import Link from "react-bootstrap/Link";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 function Login() {
@@ -71,7 +72,7 @@ function Login() {
               Submit
             </Button>
           </Form>
-          <a>Don't Have an Account? go to<Link onClick={() => navigate("/register")}>Register</Link></a>
+          <a>Don't have an Account?<Link onClick={() => navigate("/register")}>Register</Link></a>
         </Card.Body>
       </Card>
     </Container>
