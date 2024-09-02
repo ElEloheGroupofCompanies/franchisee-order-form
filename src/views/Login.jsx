@@ -67,13 +67,11 @@ function Login() {
                 onClick={() => setShowPassword(!showPassword)} // Toggle password visibility on click
               />
             </Form.Group>
-            <Button className="m-1" variant="success" type="button" onClick={() => navigate("/register")}>
-            Go to Register
-          </Button>
             <Button variant="success" type="submit">
               Submit
             </Button>
           </Form>
+          <a>Don't Have an Account? go to<Link onClick={() => navigate("/register")}>Register</Link></a>
         </Card.Body>
       </Card>
     </Container>
