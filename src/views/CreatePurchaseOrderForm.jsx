@@ -12,6 +12,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { useEffect, useRef } from "react";
 import { FormControl } from "react-bootstrap";
+import { useForm, ValidationError } from '@formspree/react';
 
 function CreatePurchaseOrderForm() {
     const { token, getItem, removeItem } = useLocalStorage();
@@ -34,6 +35,7 @@ function CreatePurchaseOrderForm() {
     const [malunggay, setMalunggay] = useState("Class C (Small)");
     const [malunggay_quantity, setMalunggayQuantity] = useState("");
     const [image, setImage] = useState("");
+    const [state, handleSubmit] = useForm("xwpezedj");
 
     async function handleCreatePurchaseOrderForm(e) {
         e.preventDefault();
@@ -88,8 +90,7 @@ function CreatePurchaseOrderForm() {
                         <Card.Title>
                             <h3 className="text-center">Create Purchase Order Form</h3>
                         </Card.Title>
-                        <Form onSubmit={handleCreatePurchaseOrderForm} action="https://formspree.io/f/mpwanaek"
-  method="POST">
+                        <Form onSubmit={handleCreatePurchaseOrderForm}>
                             <Form.Group
                                 className="mb-3"
                             >
@@ -299,7 +300,7 @@ function CreatePurchaseOrderForm() {
                                     placeholder="Image"
                                 />
                             </Form.Group>
-                            <Button variant="info" type="submit" >
+                            <Button variant="info" type="submit" onSubmit={handleSubmit}  >
                                 Submit
                             </Button>
                         </Form>
