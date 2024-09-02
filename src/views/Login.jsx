@@ -72,7 +72,7 @@ function Login() {
               Submit
             </Button>
           </Form>
-          <p>Don't have an Account?<Link onClick={() => navigate("/register")}>Register</Link></p>
+          <Card.Footer>Don't have an Account?<Card.Link  onClick={() => navigate("/register")}>Register</Card.Link></Card.Footer>
         </Card.Body>
       </Card>
     </Container>

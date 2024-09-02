@@ -7,6 +7,7 @@ import useApi from "../utils/http";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import useLocalStorage from "../hooks/useLocalStorage";
+import Link from "react-bootstrap/Link";
 
 function Register() {
   const { setItem } = useLocalStorage();
@@ -119,7 +120,7 @@ function Register() {
               Submit
             </Button>
           </Form>
-          <p>Already have an Account?<Link  onClick={() => navigate("/")}>Register</Link></p>
+          <Card.Footer>Already have an Account?<Card.Link  onClick={() => navigate("/")}>Login</Card.Link></Card.Footer>
         </Card.Body>
       </Card>
       <ToastContainer />
