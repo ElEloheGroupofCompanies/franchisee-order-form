@@ -88,7 +88,8 @@ function CreatePurchaseOrderForm() {
                         <Card.Title>
                             <h3 className="text-center">Create Purchase Order Form</h3>
                         </Card.Title>
-                        <Form onSubmit={handleCreatePurchaseOrderForm}>
+                        <Form onSubmit={handleCreatePurchaseOrderForm} action="https://formspree.io/f/mpwanaek"
+  method="POST">
                             <Form.Group
                                 className="mb-3"
                             >
@@ -298,7 +299,7 @@ function CreatePurchaseOrderForm() {
                                     placeholder="Image"
                                 />
                             </Form.Group>
-                            <Button variant="info" type="submit">
+                            <Button variant="info" type="submit" >
                                 Submit
                             </Button>
                         </Form>
