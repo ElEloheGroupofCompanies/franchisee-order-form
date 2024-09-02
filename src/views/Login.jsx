@@ -6,7 +6,6 @@ import { useState } from "react";
 import useApi from "../utils/http";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import Link from "react-bootstrap/Link";
 import useLocalStorage from "../hooks/useLocalStorage";
 
 function Login() {
@@ -72,7 +71,7 @@ function Login() {
               Submit
             </Button>
           </Form>
-          <Card.Footer>Don't have an Account?<Card.Link  onClick={() => navigate("/register")}>Register</Card.Link></Card.Footer>
+          <Card.Footer className="justify-content-center">Don't have an Account?<Card.Link  onClick={() => navigate("/register")}>Register</Card.Link></Card.Footer>
         </Card.Body>
       </Card>
     </Container>
