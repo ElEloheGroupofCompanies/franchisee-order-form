@@ -161,7 +161,7 @@ const Home = () => {
                                         <td>{form.image}</td>
                                         <td>
                                             <Button
-                                                className="m-1 text-center"
+                                                className="m-1 text-center d-flex justify-content-center"
                                                 variant="primary"
                                                 style={{ fontSize: "14px", fontFamily: "Helvetica" }}
                                                 onClick={() => handleEditClick(form)}
@@ -169,7 +169,7 @@ const Home = () => {
                                                 Edit
                                             </Button>
                                             <Button
-                                                className="m-1"
+                                                className="m-1 d-flex justify-content-center"
                                                 variant="danger"
                                                 style={{ fontSize: "14px", fontFamily: "Helvetica" }}
                                                 onClick={() => handleDelete(form.id)}
